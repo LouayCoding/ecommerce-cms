@@ -4,8 +4,9 @@ services:
     env: node
     region: frankfurt
     plan: free
-    buildCommand: cd medusa-backend && npm install && npm run build
-    startCommand: cd medusa-backend && npm run start
+    rootDir: medusa-backend
+    buildCommand: npm install && npm run build
+    startCommand: npm run start
     envVars:
       - key: DATABASE_URL
         fromDatabase:
