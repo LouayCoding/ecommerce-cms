@@ -81,14 +81,14 @@ export async function deleteProductAction(id: string) {
   const supabase = await createClient()
 
   const { data: { user } } = await supabase.auth.getUser()
-  if (!user) return { error: 'Unauthorized' }
+  if (!user) throw new Error('Unauthorized')
 
   const { error } = await supabase
     .from('products')
     .delete()
     .eq('id', id)
 
-  if (error) return { error: error.message }
+  if (error) throw new Error(error.message)
 
   revalidatePath('/admin/products')
   redirect('/admin/products')

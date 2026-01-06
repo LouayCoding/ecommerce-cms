@@ -26,7 +26,7 @@ export default async function ProductsPage() {
 
       {/* Products List */}
       <div className="space-y-6">
-        {products.map((product) => (
+        {products.map((product: any) => (
           <Card key={product.id} className="group transition-all hover:border-[var(--color-border-medium)]">
             <CardContent className="p-8">
               <div className="flex items-start justify-between gap-8">

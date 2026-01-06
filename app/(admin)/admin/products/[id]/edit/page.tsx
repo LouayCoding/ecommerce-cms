@@ -21,9 +21,9 @@ export default async function EditProductPage({ params }: { params: Promise<{ id
       return updateProductAction(id, formData)
     }
 
-    async function deleteAction() {
+    async function deleteAction(formData: FormData) {
       'use server'
-      return deleteProductAction(id)
+      await deleteProductAction(id)
     }
 
     return (

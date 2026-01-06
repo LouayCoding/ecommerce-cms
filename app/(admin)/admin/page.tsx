@@ -10,7 +10,7 @@ export default async function AdminDashboard() {
     getAllCategories(),
   ])
 
-  const publishedCount = products.filter(p => p.is_published).length
+  const publishedCount = products.filter((p: any) => p.is_published).length
 
   return (
     <div className="mx-auto max-w-[1600px] px-12 py-16">
