@@ -1,0 +1,32 @@
+services:
+  - type: web
+    name: medusa-backend
+    env: node
+    region: frankfurt
+    plan: free
+    buildCommand: cd medusa-backend && npm install && npm run build
+    startCommand: cd medusa-backend && npm run start
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: medusa-db
+          property: connectionString
+      - key: JWT_SECRET
+        generateValue: true
+      - key: COOKIE_SECRET
+        generateValue: true
+      - key: REDIS_URL
+        value: redis://red-fake:6379
+      - key: STORE_CORS
+        value: http://localhost:3000,https://*.vercel.app
+      - key: ADMIN_CORS
+        sync: false
+      - key: AUTH_CORS
+        value: http://localhost:3000,https://*.vercel.app,https://*.onrender.com
+
+databases:
+  - name: medusa-db
+    databaseName: medusa
+    user: medusa
+    plan: free
+    region: frankfurt
