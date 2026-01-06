@@ -27,7 +27,7 @@ export function ProductCard({ product }: ProductCardProps) {
     <Link href={`/products/${product.handle}`} className="group block">
       <div className="overflow-hidden border border-[var(--color-border-subtle)] bg-[var(--color-bg-secondary)] transition-all hover:border-[var(--color-border-medium)]">
         {firstImage?.url ? (
-          <div className="relative aspect-[3/4] w-full overflow-hidden">
+          <div className="relative aspect-[4/5] w-full overflow-hidden">
             <Image
               src={firstImage.url}
               alt={product.title}
@@ -36,7 +36,7 @@ export function ProductCard({ product }: ProductCardProps) {
             />
           </div>
         ) : (
-          <div className="flex aspect-[3/4] w-full items-center justify-center bg-[var(--color-bg-tertiary)]">
+          <div className="flex aspect-[4/5] w-full items-center justify-center bg-[var(--color-bg-tertiary)]">
             <span className="text-[11px] uppercase tracking-widest text-[var(--color-text-tertiary)]">
               Geen afbeelding
             </span>

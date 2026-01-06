@@ -41,10 +41,10 @@ export default async function HomePage() {
       </section>
 
       {/* Product Categories Section */}
-      <section className="bg-white py-12 md:py-20">
+      <section className="bg-white py-12">
         <div className="mx-auto max-w-[1650px] px-8">
           {/* Section Title */}
-          <h2 className="mb-6 md:mb-16 text-center text-[24px] md:text-[32px] font-light tracking-wide leading-tight text-black">
+          <h2 className="mb-6 text-center text-[24px] md:text-[32px] font-light tracking-wide leading-tight text-black md:max-w-[580px] md:mx-auto">
             Explore a Selection of the Maison's Creations
           </h2>
 
@@ -166,13 +166,10 @@ export default async function HomePage() {
       </section>
 
       {/* Featured Products Section */}
-      <section className="bg-white px-8 py-24 md:px-12">
-        <div className="mx-auto max-w-[1800px]">
-          <div className="mb-16 text-center">
-            <p className="mb-3 text-[11px] uppercase tracking-[0.2em] text-neutral-400">
-              Uitgelicht
-            </p>
-            <h2 className="text-[32px] font-light tracking-tight text-black md:text-[40px]">
+      <section className="bg-white py-12">
+        <div className="mx-auto max-w-[1650px] px-8">
+          <div className="mb-6 text-center">
+            <h2 className="text-[24px] md:text-[32px] font-light tracking-wide leading-tight text-black md:max-w-[580px] md:mx-auto">
               Onze Selectie
             </h2>
           </div>
